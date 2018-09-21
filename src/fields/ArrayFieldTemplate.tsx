@@ -27,7 +27,10 @@ export const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
         />
       )}
       {props.items.map(({ children, hasRemove, onDropIndexClick, index }) => (
-        <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
+        <div
+          key={index}
+          style={{ display: "flex", flexDirection: "row", width: "100%" }}
+        >
           <div style={{ flex: 1, marginRight: "10px" }}>{children}</div>
           {hasRemove && (
             <Button
