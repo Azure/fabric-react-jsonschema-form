@@ -1,6 +1,6 @@
 {
   "name": "fabric-react-jsonschema-form",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fabric components for react-jsonschema-form",
   "main": "bin/index.js",
   "scripts": {},
