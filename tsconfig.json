@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "bin",
+    "rootDir": "src",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "es2018", "es7"],
+    "declaration": true
+  },
+  "files": ["src/index.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "fabric-react-jsonschema-form",
+  "version": "0.0.0",
+  "description": "Fabric components for react-jsonschema-form",
+  "main": "bin/index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uifabric/icons": "^6.1.0",
+    "@uifabric/merge-styles": "^6.8.3",
+    "@uifabric/utilities": "^6.17.2",
+    "ajv": "^6.5.3",
+    "moment": "^2.22.2",
+    "office-ui-fabric-core": "^9.6.0",
+    "office-ui-fabric-react": "^6.64.0",
+    "react-dom": "^16.4.2"
+  },
+  "peerDependencies": {
+    "react": "^16.x"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.13",
+    "@types/jest": "^23.3.2",
+    "@types/react-jsonschema-form": "^1.0.9",
+    "jest": "^23.6.0",
+    "jest-junit": "^5.1.0",
+    "prettier": "^1.14.3",
+    "react": "^16.x",
+    "ts-jest": "^23.10.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.17.2"
+  }
+}
