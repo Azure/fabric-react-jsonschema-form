@@ -14,9 +14,8 @@ function Labeli(props) {
     return <div />;
   }
   return (
-    <Label className="control-label" htmlFor={id}>
+    <Label required={required} className="control-label" htmlFor={id}>
       {label}
-      {required && <span className="required">{"*"}</span>}
     </Label>
   );
 }

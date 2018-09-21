@@ -1,4 +1,11 @@
-import { Button, Label, PrimaryButton } from "office-ui-fabric-react";
+import {
+  DefaultButton,
+  DirectionalHint,
+  IconButton,
+  Label,
+  PrimaryButton,
+  TooltipHost
+} from "office-ui-fabric-react";
 import * as React from "react";
 import { ArrayFieldTemplateProps } from "react-jsonschema-form";
 
@@ -9,9 +16,8 @@ function Labeli(props) {
     return <div />;
   }
   return (
-    <Label className="control-label" htmlFor={id}>
+    <Label required={required} className="control-label" htmlFor={id}>
       {label}
-      {required && <span className="required">{"*"}</span>}
     </Label>
   );
 }
@@ -19,13 +25,29 @@ function Labeli(props) {
 export const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
   return (
     <div>
-      {props.schema.title && (
-        <Labeli
-          label={props.schema.title}
-          required={props.schema.required}
-          id={"id"}
-        />
-      )}
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        {props.schema.title && (
+          <Labeli
+            label={props.schema.title}
+            required={props.required}
+            id={"id"}
+          />
+        )}
+        {props.uiSchema["ui:description"] && (
+          <TooltipHost
+            content={props.uiSchema["ui:description"]}
+            id="myID"
+            calloutProps={{ gapSpace: 0 }}
+            directionalHint={DirectionalHint.rightCenter}
+          >
+            <IconButton
+              iconProps={{ iconName: "Info" }}
+              title="Info"
+              ariaLabel="Info"
+            />
+          </TooltipHost>
+        )}
+      </div>
       {props.items.map(({ children, hasRemove, onDropIndexClick, index }) => (
         <div
           key={index}
@@ -33,7 +55,7 @@ export const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
         >
           <div style={{ flex: 1, marginRight: "10px" }}>{children}</div>
           {hasRemove && (
-            <Button
+            <DefaultButton
               iconProps={{ iconName: "Remove" }}
               onClick={onDropIndexClick(index)}
             />
