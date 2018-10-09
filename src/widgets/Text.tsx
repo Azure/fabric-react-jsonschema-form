@@ -12,6 +12,7 @@ const FabricTextHighOrder = (highOrderProps?: ITextFieldProps) => props => {
       value={props.value}
       disabled={props.disabled}
       onChange={onChange(props.onChange)}
+      placeholder={props.placeholder}
       {...highOrderProps}
     />
   );

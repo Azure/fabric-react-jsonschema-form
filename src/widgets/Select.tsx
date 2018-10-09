@@ -20,6 +20,7 @@ export const FabricSelect: React.StatelessComponent<WidgetProps> = props => {
     <ComboBox
       selectedKey={props.value}
       disabled={props.disabled}
+      placeholder={props.placeholder}
       onChanged={onChangedPassthrough(props)}
       options={options.enumOptions.map(({ value, label, itemType }) => ({
         key: value,

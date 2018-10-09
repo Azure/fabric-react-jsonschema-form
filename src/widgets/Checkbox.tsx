@@ -19,6 +19,7 @@ export const FabricCheckbox = (props: WidgetProps & { label: string }) => (
       value={props.value}
       disabled={props.disabled}
       label={props.label}
+      placeholder={props.placeholder}
       onChange={onChange.bind(null, props)}
     />
     {(props.options as any).link && (
