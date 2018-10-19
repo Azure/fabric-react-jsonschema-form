@@ -3,7 +3,9 @@
   "version": "0.0.4",
   "description": "Fabric components for react-jsonschema-form",
   "main": "bin/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
