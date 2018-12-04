@@ -1,6 +1,6 @@
 {
   "name": "fabric-react-jsonschema-form",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Fabric components for react-jsonschema-form",
   "main": "bin/index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "moment": "^2.22.2",
     "office-ui-fabric-core": "^9.6.0",
     "office-ui-fabric-react": "^6.64.0",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "react-markdown": "^4.0.4"
   },
   "peerDependencies": {
     "react": "^16.x"
