@@ -9,7 +9,7 @@ const onChange = onChange => (event, newValue) => {
 const FabricTextHighOrder = (highOrderProps?: ITextFieldProps) => props => {
   return (
     <TextField
-      value={""}
+      value={props.value}
       disabled={props.disabled}
       onChange={onChange(props.onChange)}
       placeholder={props.placeholder}
