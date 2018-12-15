@@ -1,11 +1,7 @@
-import {
-  ChoiceGroup,
-  IChoiceGroupOption,
-  IComboBoxProps
-} from "office-ui-fabric-react";
+import { ChoiceGroup, IChoiceGroupOption } from "office-ui-fabric-react";
 import * as React from "react";
 import { WidgetProps } from "react-jsonschema-form";
-import { string } from "prop-types";
+import { LabelWithTooltip } from "./helperComponents/LabelWithTooltip";
 
 const onChange = (props: WidgetProps, event, option: IChoiceGroupOption) => {
   props.onChange(option.key);
@@ -23,7 +19,8 @@ export const FabricRadio = (
     enumDisabled,
     inline,
     enumText,
-    fabricProps
+    fabricProps,
+    enumDescriptions
   } = options as any;
 
   return (
@@ -31,7 +28,9 @@ export const FabricRadio = (
       options={enumOptions.map((option: { value: string }, i) => ({
         key: option.value,
         text: (enumText && enumText[i]) || option.value,
-        disable: enumDisabled && enumDisabled.indexOf(option.value) != -1
+        description: (enumDescriptions && enumDescriptions[i]) || option.value,
+        disable: enumDisabled && enumDisabled.indexOf(option.value) != -1,
+        onRenderLabel: LabelWithTooltip
       }))}
       required={required}
       selectedKey={value}
