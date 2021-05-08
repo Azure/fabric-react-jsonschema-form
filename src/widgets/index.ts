@@ -2,6 +2,7 @@ import { FabricCheckbox } from "./Checkbox";
 import { FabricComboBox } from "./ComboBox";
 import { FabricDatePicker } from "./DatePicker";
 import { FabricSegmentedSelect } from "./SegmentedSelect";
+import { FabricRadio } from "./Radio";
 import { FabricSelect } from "./Select";
 import { FabricText, FabricTextArea } from "./Text";
 
@@ -20,7 +21,8 @@ export const fabricWidgets = {
   FabricSegmentedSelect,
   FabricSelect,
   FabricText,
-  FabricTextArea
+  FabricTextArea,
+  FabricRadio
 };
 
 export const allWidgets = {
